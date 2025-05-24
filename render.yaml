@@ -2,10 +2,12 @@ services:
   - type: web
     name: sign-translate
     env: node
-    buildCommand: npm install && npm run build
+    buildCommand: npm config set fetch-retry-mintimeout 20000 && npm config set fetch-retry-maxtimeout 120000 && npm ci --prefer-offline --no-audit && npm run build
     startCommand: npm start
     envVars:
       - key: NODE_ENV
         value: production
       - key: PORT
-        value: 10000 
+        value: 10000
+    healthCheckPath: /healthz
+    autoDeploy: true 
