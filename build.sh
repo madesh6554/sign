@@ -18,11 +18,17 @@ npm install -g npm@10.0.0
 # Clean cache
 npm cache clean --force
 
-# Install dependencies
+# Remove existing node_modules and package-lock.json
+rm -rf node_modules package-lock.json
+
+# Install Angular CLI globally
+npm install -g @angular/cli@19.2.4
+
+# Install dependencies with exact versions
 npm install --legacy-peer-deps
 
-# Install Angular CLI
-npm install @angular/cli@19.2.5 @angular-devkit/build-angular@19.2.5 --legacy-peer-deps
+# Install Angular build tools with exact versions
+npm install @angular-devkit/build-angular@19.2.4 @angular-devkit/architect@0.1902.4 --legacy-peer-deps
 
 # Build the application
-npm run build 
+ng build --configuration=production 
