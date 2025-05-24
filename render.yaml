@@ -2,8 +2,8 @@ services:
   - type: web
     name: sign-translate
     env: node
-    buildCommand: npm install && npx ng build --configuration=production --base-href=/
-    startCommand: npm start
+    buildCommand: npm install && npm install @angular/cli@19.2.5 @angular-devkit/build-angular@19.2.5 && npx ng build --configuration=production --base-href=/
+    startCommand: npx serve -s dist/sign-translate
     envVars:
       - key: NODE_ENV
         value: production
