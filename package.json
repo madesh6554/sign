@@ -8,8 +8,8 @@
     "build:ssr": "ng build && ng run sign-translate:server"
   },
   "engines": {
-    "node": "18.18.2",
-    "npm": "9.8.1"
+    "node": ">=20.0.0",
+    "npm": ">=10.0.0"
   },
   "private": true,
   "dependencies": {
@@ -95,7 +95,7 @@
     "@angular/cli": "19.2.5",
     "@angular/compiler-cli": "19.2.4",
     "@capacitor/assets": "3.0.5",
-    "@capacitor/cli": "7.2.0",
+    "@capacitor/cli": "^6.5.3",
     "@ionic/angular-server": "8.5.2",
     "@playwright/test": "1.51.1",
     "@sign-mt/configuration": "git://github.com/sign/.github.git",
