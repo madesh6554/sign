@@ -3,6 +3,7 @@
   "version": "0.0.3",
   "scripts": {
     "build": "ng build --configuration=production --base-href=/",
+    "build:ssr": "ng build && ng run sign-translate:server",
     "serve:ssr:sign-translate": "node dist/sign-translate/server/server.mjs",
     "start": "node dist/sign-translate/server/server.mjs"
   },
