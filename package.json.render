@@ -3,7 +3,8 @@
   "version": "0.0.3",
   "scripts": {
     "build": "ng build --configuration=production --base-href=/",
-    "serve:ssr:sign-translate": "node dist/sign-translate/server/server.mjs"
+    "serve:ssr:sign-translate": "node dist/sign-translate/server/server.mjs",
+    "start": "node dist/sign-translate/server/server.mjs"
   },
   "dependencies": {
     "@angular/animations": "19.2.4",
@@ -18,21 +19,22 @@
     "@angular/platform-server": "19.2.4",
     "@angular/router": "19.2.4",
     "@angular/service-worker": "19.2.4",
-    "@angular/ssr": "19.2.5"
+    "@angular/ssr": "19.2.5",
+    "express": "5.1.0"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "19.2.4",
+    "@angular-devkit/build-angular": "19.2.5",
     "@angular-devkit/core": "19.2.4",
     "@angular-devkit/schematics": "19.2.4",
-    "@angular/cli": "19.2.4",
+    "@angular/cli": "19.2.5",
     "@angular/compiler-cli": "19.2.4",
     "@angular/language-service": "19.2.4",
-    "typescript": "~5.3.3",
+    "typescript": "~5.4.2",
     "rxjs": "~7.8.0",
-    "zone.js": "~0.13.0",
-    "core-js": "^3.32.2"
+    "zone.js": "~0.15.0"
   },
   "engines": {
-    "node": ">=18"
+    "node": ">=18",
+    "npm": ">=9"
   }
 }
