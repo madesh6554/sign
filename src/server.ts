@@ -12,6 +12,11 @@ const indexHtml = join(serverDistFolder, 'index.server.html');
 const app = express();
 const commonEngine = new CommonEngine();
 
+// Health check endpoint
+app.get('/healthz', (req, res) => {
+  res.status(200).send('OK');
+});
+
 /**
  * Example Express Rest API endpoints can be defined here.
  * Uncomment and define endpoints as necessary.
