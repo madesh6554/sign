@@ -3,7 +3,7 @@ services:
     name: sign-translate
     env: node
     buildCommand: npm install && npm install @angular/cli@19.2.5 @angular-devkit/build-angular@19.2.5 && npm run build
-    startCommand: npm start
+    startCommand: npx serve -s dist/sign-translate -l $PORT
     envVars:
       - key: NODE_ENV
         value: production
