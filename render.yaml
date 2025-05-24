@@ -2,10 +2,20 @@ services:
   - type: web
     name: sign-translate
     env: node
-    buildCommand: npm install && npm install @angular/cli@19.2.5 @angular-devkit/build-angular@19.2.5 && npm run build
+    buildCommand: |
+      npm install
+      npm install @angular/cli@19.2.5 @angular-devkit/build-angular@19.2.5
+      npm run build
     startCommand: npx serve -s dist/sign-translate -l $PORT
     envVars:
       - key: NODE_ENV
         value: production
+      - key: NODE_VERSION
+        value: 20.0.0
     healthCheckPath: /
-    autoDeploy: true 
+    autoDeploy: true
+    plan: free
+    disk:
+      name: tmp
+      mountPath: /tmp
+      sizeGB: 1 

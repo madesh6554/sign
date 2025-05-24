@@ -8,3 +8,10 @@ dist/
 .DS_Store
 *.swp
 *.swo
+.github
+.husky
+.angular
+android
+ios
+*.md
+!README.md

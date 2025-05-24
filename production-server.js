@@ -2,12 +2,12 @@ const express = require('express');
 const path = require('path');
 const app = express();
 
-// Serve static files from dist directory
-app.use(express.static(path.join(__dirname, 'dist/sign-translate/browser')));
+// Serve static files from the dist directory
+app.use(express.static(path.join(__dirname, 'dist/sign-translate')));
 
-// Handle all routes
+// Handle all routes by serving the index.html
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'dist/sign-translate/browser/index.html'));
+  res.sendFile(path.join(__dirname, 'dist/sign-translate/index.html'));
 });
 
 // Error handling
@@ -16,8 +16,8 @@ app.use((err, req, res, next) => {
   res.status(500).send('Something broke!');
 });
 
-// Start server
+// Start the server
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
-  console.log(`Server running on port ${port}`);
+  console.log(`Server is running on port ${port}`);
 });
