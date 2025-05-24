@@ -3,7 +3,13 @@ services:
     name: sign-translate
     env: node
     buildCommand: |
+      curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+      export NVM_DIR="$HOME/.nvm"
+      [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+      nvm install 20.0.0
+      nvm use 20.0.0
       npm install -g npm@10.0.0
+      npm cache clean --force
       npm install
       npm install @angular/cli@19.2.5 @angular-devkit/build-angular@19.2.5
       npm run build
