@@ -2,7 +2,7 @@ services:
   - type: web
     name: sign-translate
     env: node
-    buildCommand: npm install && npm run build
+    buildCommand: npm install && npx ng build --configuration=production --base-href=/
     startCommand: npm start
     envVars:
       - key: NODE_ENV
