@@ -90,8 +90,7 @@
             "sourceMap": true,
             "optimization": false,
             "namedChunks": true,
-            "webWorkerTsConfig": "tsconfig.worker.json",
-            "browser": "src/main.ts"
+            "webWorkerTsConfig": "tsconfig.worker.json"
           },
           "configurations": {
             "production": {
