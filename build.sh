@@ -9,8 +9,8 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
 # Install and use Node.js
-nvm install 20.5.0
-nvm use 20.5.0
+nvm install 20.11.1
+nvm use 20.11.1
 
 # Install npm
 npm install -g npm@10.0.0
