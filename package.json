@@ -3,13 +3,21 @@
   "version": "0.0.3",
   "scripts": {
     "build": "ng build --configuration=production --base-href=/",
-    "serve:ssr:sign-translate": "node dist/sign-translate/server/server.mjs"
+    "serve:ssr:sign-translate": "node dist/sign-translate/server/server.mjs",
+    "postinstall": "ngcc",
+    "start": "node server.js"
   },
   "engines": {
     "node": ">=18",
     "npm": ">=9"
   },
   "private": true,
+  "devDependencies": {
+    "@angular/cli": "19.2.5",
+    "@angular/compiler-cli": "19.2.4",
+    "@angular-devkit/build-angular": "19.2.5",
+    "typescript": "~5.4.2"
+  },
   "dependencies": {
     "@angular/animations": "19.2.4",
     "@angular/cdk": "19.2.7",
