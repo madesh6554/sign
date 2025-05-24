@@ -85,7 +85,7 @@
               "includePaths": ["node_modules/"]
             },
             "scripts": [],
-            "serviceWorker": "ngsw-config.json",
+            "serviceWorker": true,
             "extractLicenses": false,
             "sourceMap": true,
             "optimization": false,
