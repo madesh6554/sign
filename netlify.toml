@@ -1,5 +1,5 @@
 [build]
-  command = "npm install && npm run build"
+  command = "npm install && npx ng build --configuration=production"
   publish = "dist/sign-translate"
 
 [[redirects]]
@@ -10,6 +10,7 @@
 [build.environment]
   PORT = "3000"
   NODE_ENV = "production"
+  NODE_VERSION = "20"
 
 [dev]
   command = "npm run start"
