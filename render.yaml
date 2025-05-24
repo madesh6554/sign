@@ -2,7 +2,7 @@ services:
   - type: web
     name: sign-translate
     env: node
-    buildCommand: npm install -g @angular/cli@19.2.5 && npm install @angular-devkit/build-angular@19.2.5 @angular-devkit/architect@0.1902.5 @angular-devkit/core@19.2.4 && npm config set fetch-retry-mintimeout 20000 && npm config set fetch-retry-maxtimeout 120000 && npm ci --prefer-offline --no-audit && ng build --configuration=production --base-href=/ --builder=@angular-devkit/build-angular:browser
+    buildCommand: npm install -g @angular/cli@19.2.5 && npm install @angular-devkit/build-angular@19.2.5 @angular-devkit/architect@0.1902.5 @angular-devkit/core@19.2.4 @angular/compiler@19.2.5 @angular/compiler-cli@19.2.5 && npm config set fetch-retry-mintimeout 20000 && npm config set fetch-retry-maxtimeout 120000 && npm ci --prefer-offline --no-audit && ng build --configuration=production --base-href=/
     startCommand: npm start
     envVars:
       - key: NODE_ENV
