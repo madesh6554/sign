@@ -28,7 +28,10 @@ npm install -g @angular/cli@19.2.4
 npm install --legacy-peer-deps
 
 # Install Angular build tools with exact versions
-npm install @angular-devkit/build-angular@19.2.4 @angular-devkit/architect@0.1902.4 --legacy-peer-deps
+npm install --save-dev @angular-devkit/build-angular@19.2.4 @angular-devkit/architect@0.1902.4 --legacy-peer-deps
+
+# Install Angular core packages
+npm install --save @angular/core@19.2.4 @angular/common@19.2.4 @angular/platform-browser@19.2.4 @angular/platform-browser-dynamic@19.2.4 --legacy-peer-deps
 
 # Build the application
 ng build --configuration=production 
